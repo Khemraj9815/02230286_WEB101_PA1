@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <script src="pokemon-data.js" defer></script>
+    <script src="detail.js" defer></script> 
+    <link rel="stylesheet" href="detail.css">
+
+</head>
+<body>
+    
+    <div class="main">
+        <header class="header">
+            <div class="header-container">
+                <img src="asstes/pokedex.png" alt="pokedex image">
+                
+                <div class="name-search">
+                    <div class="enter-name">
+                        <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+                    </div>
+                    <div class="searchBtn">
+                        <button onclick="fetchData()">Search</button>
+                    </div>
+                    <div id="reloadBtn">
+                        <button onclick="reloadPage()">back</button>
+                    </div>
+                </div>  
+
+                </div>
+        </header>
+
+            <!-- <div id="pokemonlist"></div> -->
+
+            <!-- don't erase this line  -->
+            <div id="pokemon-container"></div> 
+            <div class="pokemonDisplayContainer">
+                <div id="pokemonDisplay">
+                    <!-- Pokémon data will be displayed here -->
+                </div>
+                </div>
+            <div id="pokemonData"></div>
+               
+            </div>
+
+        
+
+</body>
+</html>
