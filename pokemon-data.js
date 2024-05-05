@@ -40,9 +40,6 @@ async function displayPokemon() {
                     <div class="pokemon-div" data-pokemon-id="${details.id}">
                         <h3 class="pokemon-name">${name}</h3>
                         <img class="pokemon-image" src="${imageUrl}" alt="${details.name}">
-                        <p id="seen">Unseen</p>
-                        <button id="adding" onclick="addtoseen()">Add</button>
-
                     </div>
                 `;
 
@@ -105,12 +102,18 @@ displayPokemon();
 
 // Function to create HTML for a Pokémon's details
 function createPokemonDetailsHtml(details) {
+
+    const name = details.name;
+    const imageUrl = details.sprites.front_default;
+    const height = details.height;
+    const weight = details.weight;
+
     return `
         <div class="pokemon-details">
-            <h2>${details.name}</h2>
-            <img src="${details.sprites.front_default}" alt="${details.name}">
-            <p>Height: ${details.height}</p>
-            <p>Weight: ${details.weight}</p>
+            <h2>${name}</h2>
+            <img src="${imageUrl}" alt="${name}">
+            <p>Height: ${height}</p>
+            <p>Weight: ${weight}</p>
             <p>Abilities: ${details.abilities.map(ability => ability.ability.name).join(', ')}</p>
             <p>Types: ${details.types.map(type => type.type.name).join(', ')}</p>
         </div>
@@ -137,8 +140,6 @@ async function fetchData() {
             <div id="searchpokemonContainer">
                 <p id="searchPokemonName">${data.name}</p>
                 <img id="searchPokemonImage" src="${pokemonSprite}" alt="${pokemonName}">
-                <p id="unseen">Unseen</p>
-                <button id="add" onclick="addtoseen()">Add</button>
             </div>         
         `;
 
@@ -160,7 +161,3 @@ function showPokemonDetails(details) {
 }
 
 
-function addtoseen(){
-    var add = document.getElementById('unseen');
-    add.innerHTML = "Seen";
-}
