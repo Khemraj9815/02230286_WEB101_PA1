@@ -23,10 +23,17 @@ body{
 
 }
 
+#fav{
+    align-items: center;
+    display: flex;
+    height: 30px;
+    margin-top: 20px; 
+}
+
 .name-search{
     display: flex;
-    justify-content:center;
-    align-items: center;    
+    align-items: center; 
+    padding: 20px;   
 }
 
 .enter-name{
@@ -45,7 +52,7 @@ body{
     padding: 15px;
 } 
 
-#reloadBtn {
+#backbtn {
     display: flex;
     height: 30px;
     justify-content: center;
@@ -53,10 +60,9 @@ body{
     padding: 7px;
 } 
 
-hr{
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#backButton{
+    height: 30px;
+    width: 50px;
 }
 
 .pokemon-container{
@@ -78,10 +84,6 @@ hr{
 
 }
 
-.pokemoni-list{
-    padding: 20px;
-}
-
 .container {
     display: flex;
     flex-direction: row;
@@ -89,15 +91,12 @@ hr{
     padding: 20px;
 }
 
-
-/* Pokemon Container */
 #pokemon-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
 }
-
 
 .pokemon-div {
     background-color: #a2a6aa;
@@ -110,7 +109,7 @@ hr{
 }
 
 .pokemon-div {
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -133,16 +132,12 @@ hr{
     border-radius: 50%;
 }
 
-
-
 #pokemonDisplay{
     align-items: center;
     height: 500px;
     width: 250px;
     display: flex;    
     justify-content: center;
-   
-
 }
 
 .pokemonDisplayContainer{
@@ -152,7 +147,6 @@ hr{
     justify-content: center;
     padding: 30px;
 }
-
 
 #searchpokemonContainer{
     display: flex;
@@ -176,6 +170,7 @@ hr{
 
 #searchPokemonName {
     color: #333;
+    font-weight: bolder;
     font-size: 18px;
     margin-bottom: 10px;}
 
@@ -185,8 +180,7 @@ hr{
     flex-direction: column;
     justify-content: center;
     border: 3px solid white;
-    height: 100vh; /* Adjust the height as needed */
-    
+    height: 100vh;     
 }
 
 
@@ -194,4 +188,56 @@ hr{
     color: white;
     font-weight: bold;
     font-size: 25px;
+}
+
+.pokemon-details {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 20px 0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 300px;
+
+}
+
+.pokemon-details h2 {
+    color: #333; 
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+.pokemon-details img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+}
+
+.pokemon-details p {
+    color: #666; 
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#add{
+    border: 2px solid black;
+    height: 33px;
+    width: 100px;
+    border-radius: 10px;
+
+}
+
+#add:hover{
+    cursor: pointer;
+}
+
+#adding{
+    border: 2px solid black;
+    height: 33px;
+    width: 100px;
+    border-radius: 10px;
+
 }
